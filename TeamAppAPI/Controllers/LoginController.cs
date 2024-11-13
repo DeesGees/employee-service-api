@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using TeamAppAPI.Data;
 using TeamAppAPI.Model;
 using TeamAppAPI.Services;
@@ -39,6 +40,8 @@ namespace TeamAppAPI.Controllers
 
                 if (user != null && user.Email == loginData.Email && user.Password == hashedPassword)
                 {
+
+
                     return Ok(new
                     {
                         message = "Login successful",

@@ -33,11 +33,12 @@ namespace TeamAppAPI
                 app.UseSwaggerUI();
             }
 
+            app.UseSession();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
-            app.UseSession();
+
 
             app.MapControllers();
 
