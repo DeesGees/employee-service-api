@@ -41,9 +41,14 @@ namespace TeamAppAPI.Controllers
                 if (user != null && user.Email == loginData.Email && user.Password == hashedPassword)
                 {
 
+                    
+
 
                     return Ok(new
                     {
+                        token = new Dictionary<string, string>{
+                                {"token", _methods.CreateToken(user.Id)}
+                                                        },
                         message = "Login successful",
                         user = user, 
                         role = role?.Name

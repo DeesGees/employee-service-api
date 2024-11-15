@@ -13,9 +13,9 @@ namespace TeamAppAPI.Controllers
         private readonly ApplicationDbContext _dapper;
         private readonly Methods _methods;
 
-        public ProfileController(IConfiguration config, Methods methods)
+        public ProfileController(ApplicationDbContext dapper, Methods methods)
         {
-            _dapper = new ApplicationDbContext(config);
+            _dapper = dapper;    
             _methods = methods;
         }
 
