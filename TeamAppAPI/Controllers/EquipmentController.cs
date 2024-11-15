@@ -8,6 +8,7 @@ using TeamAppAPI.Model;
 
 namespace TeamAppAPI.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class EquipmentController : ControllerBase

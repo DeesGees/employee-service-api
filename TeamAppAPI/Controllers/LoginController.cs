@@ -45,7 +45,7 @@ namespace TeamAppAPI.Controllers
                     return Ok(new
                     {
                         message = "Login successful",
-                        user = user, 
+                        user = user,
                         role = role?.Name
                     });
                 }
